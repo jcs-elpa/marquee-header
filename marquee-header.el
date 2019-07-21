@@ -152,9 +152,9 @@ TIME is the time that will show on screen.  DIRECTION is for marquee animation."
                                                (equal direction 'right)))
                                       direction
                                     marquee-header-direction))
-  (cond ((equal direction 'left)
+  (cond ((equal marquee-header--direction 'left)
          (setq marquee-header--message-decoration (concat (marquee-header--padding (window-width)) marquee-header--message)))
-        ((equal direction 'right)
+        ((equal marquee-header--direction 'right)
          (setq marquee-header--message-decoration marquee-header--message)))
   (setq marquee-header--frame-counter (+ (window-width) (length marquee-header--message)))  ; Reset frame counter.
   (marquee-header--display-header (selected-window)))
