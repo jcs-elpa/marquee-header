@@ -5,6 +5,10 @@
 # marquee-header
 > Code interface for displaying marquee in header.
 
+<p align="center">
+  <img src="./screenshot/demo.gif"/>
+</p>
+
 
 ## Usage
 
