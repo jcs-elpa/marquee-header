@@ -20,9 +20,9 @@ You can make marquee by using the function `marquee-header-notify` like this.
 
 ### Directions
 
-* none - just display it without moving it.
-* right - Move from left to the right.
-* left - Move from right to the left.  [Default]
+* **none** - just display it without moving it.
+* **right** - Move from left to the right.
+* **left** - Move from right to the left.  [Default]
 
 
 ## Contribution
