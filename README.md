@@ -10,11 +10,15 @@
 
 You can make marquee by using the function `marquee-header-notify` like this.
 
+### Functions
+
 ```el
-(marquee-header-notify "You got message!!~" 10.0 'left)
+(marquee-header-notify "You got message!!~"  ; Message
+                        10.0                 ; Time
+                        'left)               ; Direction
 ```
 
-### Direction
+### Directions
 
 * none - just display it without moving it.
 * right - Move from left to the right.
