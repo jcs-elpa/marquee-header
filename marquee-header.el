@@ -40,7 +40,7 @@
   :link '(url-link :tag "Repository" "https://github.com/jcs090218/marquee-header"))
 
 
-(defcustom marquee-header-display-time 3.0
+(defcustom marquee-header-display-time 10.0
   "How long you want to show the marquee message."
   :type 'float
   :group 'marquee-header)
@@ -98,15 +98,6 @@ ARGS : Rest of the arguments."
     (setq marquee-header--time time)
     (setq marquee-header--previous-header-line-format p-hlf)))
 (advice-add 'switch-to-buffer :around #'marquee-header--switch-to-buffer-around)
-
-(defun marquee-header--padding (w)
-  "Get the whitespace padding with W."
-  (let ((padding-str "")
-        (padding-cnt 0))
-    (while (< padding-cnt w)
-      (setq padding-str (concat padding-str " "))
-      (setq padding-cnt (1+ padding-cnt)))
-    padding-str))
 
 (defun marquee-header--cancel-timer ()
   "Cancel all timer for marquee."
@@ -174,7 +165,7 @@ TIME is the time that will show on screen.  DIRECTION is for marquee animation."
                                       direction
                                     marquee-header-direction))
   (cond ((equal marquee-header--direction 'left)
-         (setq marquee-header--message-decoration (concat (marquee-header--padding (window-width)) marquee-header--message)))
+         (setq marquee-header--message-decoration (concat (spaces-string (window-width)) marquee-header--message)))
         ((equal marquee-header--direction 'right)
          (setq marquee-header--message-decoration marquee-header--message)))
   (setq marquee-header--frame-counter (+ (window-width) (length marquee-header--message)))  ; Reset frame counter.
