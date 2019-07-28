@@ -32,6 +32,8 @@
 
 ;;; Code:
 
+(require 'rect)
+
 
 (defgroup marquee-header nil
   "Code interface for displaying marquee in header."
