@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Code interface for displaying marquee in header.
 ;; Keyword: animation header interface library marquee
-;; Version: 0.0.3
+;; Version: 0.0.5
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs090218/marquee-header
 
