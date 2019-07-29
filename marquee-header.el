@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Code interface for displaying marquee in header.
 ;; Keyword: animation header interface library marquee
-;; Version: 0.0.6
+;; Version: 0.0.7
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs090218/marquee-header
 
@@ -111,7 +111,7 @@ ARGS : Rest of the arguments."
 (defun marquee-header--revert-header ()
   "Reset header line format to previous value."
   (setq-local header-line-format marquee-header--previous-header-line-format)
-  (setq marquee-header--previous-header nil))
+  (setq marquee-header--previous-header-line-format nil))
 
 (defun marquee-header--cleanup-display ()
   "Cleanup the animation display."
