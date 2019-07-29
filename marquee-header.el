@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Code interface for displaying marquee in header.
 ;; Keyword: animation header interface library marquee
-;; Version: 0.0.5
+;; Version: 0.0.6
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs090218/marquee-header
 
@@ -110,7 +110,8 @@ ARGS : Rest of the arguments."
 
 (defun marquee-header--revert-header ()
   "Reset header line format to previous value."
-  (setq-local header-line-format marquee-header--previous-header-line-format))
+  (setq-local header-line-format marquee-header--previous-header-line-format)
+  (setq marquee-header--previous-header nil))
 
 (defun marquee-header--cleanup-display ()
   "Cleanup the animation display."
@@ -147,31 +148,30 @@ ARGS : Rest of the arguments."
                            nil
                            'marquee-header--display-header cw))))))
 
-;;;###autoload
 (defun marquee-header-notify (msg &optional time direction)
   "Show the marquee notification with MSG.
 TIME is the time that will show on screen.  DIRECTION is for marquee animation."
-  (setq marquee-header--previous-header-line-format header-line-format)
-  (if (and msg
-           (stringp msg))
-      (setq marquee-header--message msg)
-    (error "Can't display marquee header without appropriate message"))
-  (setq marquee-header--time (if (and time
-                                      (numberp time))
-                                 time
-                               marquee-header-display-time))
-  (setq marquee-header--direction (if (and direction
-                                           (or (equal direction 'none)
-                                               (equal direction 'left)
-                                               (equal direction 'right)))
-                                      direction
-                                    marquee-header-direction))
-  (cond ((equal marquee-header--direction 'left)
-         (setq marquee-header--message-decoration (concat (spaces-string (window-width)) marquee-header--message)))
-        ((equal marquee-header--direction 'right)
-         (setq marquee-header--message-decoration marquee-header--message)))
-  (setq marquee-header--frame-counter (+ (window-width) (length marquee-header--message)))  ; Reset frame counter.
-  (marquee-header--display-header (selected-window)))
+  (unless marquee-header--timer
+    (setq marquee-header--previous-header-line-format header-line-format)
+    (if (stringp msg)
+        (setq marquee-header--message msg)
+      (error "Can't display marquee header without appropriate message"))
+    (setq marquee-header--time (if (and time
+                                        (numberp time))
+                                   time
+                                 marquee-header-display-time))
+    (setq marquee-header--direction (if (and direction
+                                             (or (equal direction 'none)
+                                                 (equal direction 'left)
+                                                 (equal direction 'right)))
+                                        direction
+                                      marquee-header-direction))
+    (cond ((equal marquee-header--direction 'left)
+           (setq marquee-header--message-decoration (concat (spaces-string (window-width)) marquee-header--message)))
+          ((equal marquee-header--direction 'right)
+           (setq marquee-header--message-decoration marquee-header--message)))
+    (setq marquee-header--frame-counter (+ (window-width) (length marquee-header--message)))  ; Reset frame counter.
+    (marquee-header--display-header (selected-window))))
 
 
 (provide 'marquee-header)
