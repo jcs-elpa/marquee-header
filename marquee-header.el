@@ -129,7 +129,7 @@ ARGS : Rest of the arguments."
                 (run-at-time marquee-header--time
                              nil
                              'marquee-header--cleanup-display)))
-      (setq marquee-header--speed (/ marquee-header--time (window-width)))
+      (setq marquee-header--speed (/ (float marquee-header--time) (window-width)))
       (cond ((equal marquee-header--direction 'left)
              ;; Remove the first character.
              (setq marquee-header--message-decoration
@@ -156,8 +156,7 @@ TIME is the time that will show on screen.  DIRECTION is for marquee animation."
     (if (stringp msg)
         (setq marquee-header--message msg)
       (error "Can't display marquee header without appropriate message"))
-    (setq marquee-header--time (if (and time
-                                        (numberp time))
+    (setq marquee-header--time (if (numberp time)
                                    time
                                  marquee-header-display-time))
     (setq marquee-header--direction (if (and direction
