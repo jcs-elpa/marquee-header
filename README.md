@@ -1,16 +1,14 @@
-[![Build Status](https://travis-ci.com/jcs090218/marquee-header.svg?branch=master)](https://travis-ci.com/jcs090218/marquee-header)
+[![Build Status](https://travis-ci.com/jcs-elpa/marquee-header.svg?branch=master)](https://travis-ci.com/jcs-elpa/marquee-header)
 [![MELPA](https://melpa.org/packages/marquee-header-badge.svg)](https://melpa.org/#/marquee-header)
 [![MELPA Stable](https://stable.melpa.org/packages/marquee-header-badge.svg)](https://stable.melpa.org/#/marquee-header)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 
 # marquee-header
 > Code interface for displaying marquee in header.
 
 <p align="center">
-  <img src="./screenshot/demo.gif"/>
+  <img src="./etc/demo.gif"/>
 </p>
-
 
 ## Usage
 
@@ -29,7 +27,6 @@ You can make marquee by using the function `marquee-header-notify` like this.
 * **none** - just display it without moving it.
 * **right** - Move from left to the right.
 * **left** - Move from right to the left.  [Default]
-
 
 ## Contribution
 
