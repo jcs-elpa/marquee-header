@@ -1,4 +1,4 @@
-;;; marquee-header.el --- Code interface for displaying marquee in header.  -*- lexical-binding: t; -*-
+;;; marquee-header.el --- Code interface for displaying marquee in header  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Shen, Jen-Chieh
 ;; Created date 2019-07-21 12:03:34
@@ -8,7 +8,7 @@
 ;; Keyword: animation header interface library marquee
 ;; Version: 0.0.8
 ;; Package-Requires: ((emacs "25.1"))
-;; URL: https://github.com/jcs090218/marquee-header
+;; URL: https://github.com/jcs-elpa/marquee-header
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -34,13 +34,11 @@
 
 (require 'rect)
 
-
 (defgroup marquee-header nil
   "Code interface for displaying marquee in header."
   :prefix "marquee-header-"
   :group 'tool
-  :link '(url-link :tag "Repository" "https://github.com/jcs090218/marquee-header"))
-
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/marquee-header"))
 
 (defcustom marquee-header-display-time 10.0
   "How long you want to show the marquee message."
@@ -53,7 +51,6 @@
                  (const :tag "left" left)
                  (const :tag "right" right))
   :group 'marquee-header)
-
 
 (defvar-local marquee-header--message ""
   "Current message.")
@@ -78,7 +75,6 @@
 
 (defvar-local marquee-header--frame-counter 0
   "Count the frame.")
-
 
 (defun marquee-header--switch-to-buffer-around (fnc &rest args)
   "Advice execute around `switch-to-buffer' function.
@@ -171,7 +167,6 @@ TIME is the time that will show on screen.  DIRECTION is for marquee animation."
            (setq marquee-header--message-decoration marquee-header--message)))
     (setq marquee-header--frame-counter (+ (window-width) (length marquee-header--message)))  ; Reset frame counter.
     (marquee-header--display-header (selected-window))))
-
 
 (provide 'marquee-header)
 ;;; marquee-header.el ends here
