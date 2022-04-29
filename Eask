@@ -1,6 +1,11 @@
-(source "melpa")
+(package "marquee-header"
+         "0.0.9"
+         "Code interface for displaying marquee in header")
 
 (package-file "marquee-header.el")
 
-(setq network-security-level 'low      ; see https://github.com/jcs090218/setup-emacs-windows/issues/156#issuecomment-932956432
-      byte-compile-error-on-warn nil)
+(source "melpa")
+
+(depends-on "emacs" "25.1")
+
+(setq network-security-level 'low)  ; see https://github.com/jcs090218/setup-emacs-windows/issues/156#issuecomment-932956432
