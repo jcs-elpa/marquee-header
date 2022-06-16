@@ -4,11 +4,10 @@
 ;; Created date 2019-07-21 12:03:34
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Code interface for displaying marquee in header.
-;; Keyword: animation header interface library marquee
+;; URL: https://github.com/jcs-elpa/marquee-header
 ;; Version: 0.0.9
 ;; Package-Requires: ((emacs "25.1"))
-;; URL: https://github.com/jcs-elpa/marquee-header
+;; Keywords: animation header interface library marquee
 
 ;; This file is NOT part of GNU Emacs.
 

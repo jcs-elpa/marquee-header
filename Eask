@@ -2,6 +2,9 @@
          "0.0.9"
          "Code interface for displaying marquee in header")
 
+(website-url "https://github.com/jcs-elpa/marquee-header")
+(keywords "animation" "header" "interface" "library" "marquee")
+
 (package-file "marquee-header.el")
 
 (source "melpa")
