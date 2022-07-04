@@ -3,7 +3,7 @@
          "Code interface for displaying marquee in header")
 
 (website-url "https://github.com/jcs-elpa/marquee-header")
-(keywords "animation" "header" "interface" "library" "marquee")
+(keywords "wp" "animation" "marquee")
 
 (package-file "marquee-header.el")
 
