@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/marquee-header
 ;; Version: 0.0.9
 ;; Package-Requires: ((emacs "25.1"))
-;; Keywords: wp animation header interface library marquee
+;; Keywords: wp animation marquee
 
 ;; This file is NOT part of GNU Emacs.
 
