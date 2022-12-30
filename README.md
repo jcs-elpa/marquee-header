@@ -13,21 +13,21 @@
 
 ## Usage
 
-You can make marquee by using the function `marquee-header-notify` like this.
+You can make the marquee by using the function `marquee-header-notify` like this.
 
 ### Functions
 
-```el
+```elisp
 (marquee-header-notify "You got message!!~"  ; Message
-                        10.0                 ; Time
-                        'left)               ; Direction
+                        :time 10.0           ; Time
+                        :direction 'left)    ; Direction
 ```
 
 ### Directions
 
 * **none** - just display it without moving it.
-* **right** - Move from left to the right.
-* **left** - Move from right to the left.  [Default]
+* **right** - Move from left to right.
+* **left** - Move from right to left.  [Default]
 
 ## Contribute
 
