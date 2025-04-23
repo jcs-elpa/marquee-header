@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "marquee-header"
          "0.0.9"
          "Code interface for displaying marquee in header")
