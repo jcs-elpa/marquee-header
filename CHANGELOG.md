@@ -13,4 +13,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## 0.1.0 (Unreleased)
 > Released Dec 30, 2022
 
-* Clean up logic (1fee5bbec486d0755954f5cafda67f342dc7daa1)
+* Clean up logic ([`1fee5bb`](../../commit/1fee5bbec486d0755954f5cafda67f342dc7daa1))
