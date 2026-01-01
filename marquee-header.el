@@ -1,6 +1,6 @@
 ;;; marquee-header.el --- Code interface for displaying marquee in header  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2025  Shen, Jen-Chieh
+;; Copyright (C) 2019-2026  Shen, Jen-Chieh
 ;; Created date 2019-07-21 12:03:34
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
